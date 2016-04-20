@@ -1,9 +1,10 @@
 package Oppgave1;
 
 import java.util.Scanner;
+
 public class Oppgave1 {
-private static int count =0;
-static Scanner input = new Scanner(System.in);
+	private static int count = 0;
+	static Scanner input = new Scanner(System.in);
 
 	public static void main(String[] args) {
 		String normal, reversere = "";
@@ -17,7 +18,7 @@ static Scanner input = new Scanner(System.in);
 	}
 
 	public static void baklengs(String tekst) {
-		baklengs(tekst);//(tekst.length() - 1);
+		baklengs(tekst);// (tekst.length() - 1);
 	}
 
 	public static void snuTekst(String tekst, int index) {
@@ -30,30 +31,30 @@ static Scanner input = new Scanner(System.in);
 			count = 0;
 		}
 	}
-// 		 Validate string.
-//		 *
-//		 * @param prompt
-//		 *            Prompt which is shown to user
-//		 * @return the string that user has provided
-//		 */
-		public static String validateString(String prompt) {
-	
-			String respons = "";
-			
-	
-			while (respons == null || respons.equals("")) {
-				System.out.println(prompt);
-	
-				try {
-	
-					respons = input.nextLine();
-	
-				} catch (Exception ex) {
-	
-					System.out.println("Skriv inn en gyldig respons.");
-				}
+
+	// Validate string.
+	// *
+	// * @param prompt
+	// * Prompt which is shown to user
+	// * @return the string that user has provided
+	// */
+	public static String validateString(String prompt) {
+
+		String respons = "";
+
+		while (respons == null || respons.equals("")) {
+			System.out.println(prompt);
+
+			try {
+
+				respons = input.nextLine();
+
+			} catch (Exception ex) {
+
+				System.out.println("Skriv inn en gyldig respons.");
 			}
-			return respons;
 		}
-	
+		return respons;
 	}
+
+}
